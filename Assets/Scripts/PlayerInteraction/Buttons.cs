@@ -4,7 +4,7 @@ public class Buttons : MonoBehaviour
 {
     private bool isMouseOver;
     public Animator doorAnimator;
-    private bool doorClosed;
+    public bool doorClosed;
     public GameObject resourcesManager;
     public int doorNumber;
 
