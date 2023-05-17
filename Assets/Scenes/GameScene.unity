@@ -681,6 +681,7 @@ MonoBehaviour:
   lightButton2: {fileID: 1311083882}
   animatorDoor1: {fileID: 243185578}
   animatorDoor2: {fileID: 1024388618}
+  player: {fileID: 893945810}
 --- !u!1 &227182530
 GameObject:
   m_ObjectHideFlags: 0
@@ -5351,6 +5352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesManager: {fileID: 163157125}
   tablet: {fileID: 1009925467}
+  isWorking: 1
 --- !u!114 &893945817
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class EnergyEnd : MonoBehaviour
     public GameObject lightButton2;
     public Animator animatorDoor1;
     public Animator animatorDoor2;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +28,6 @@ public class EnergyEnd : MonoBehaviour
         lightButton2.SetActive(false);
         animatorDoor1.Play("openDoor");
         animatorDoor2.Play("openDoor");
+        player.GetComponent<Tablet>().isWorking = false;
     }
 }

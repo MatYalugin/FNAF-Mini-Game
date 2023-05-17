@@ -6,6 +6,7 @@ public class Tablet : MonoBehaviour
 {
     public GameObject resourcesManager;
     public GameObject tablet;
+    public bool isWorking = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class Tablet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && tablet.activeSelf == false)
+        if (Input.GetKeyDown(KeyCode.Space) && tablet.activeSelf == false && isWorking != false)
         {
             tablet.SetActive(true);
             resourcesManager.GetComponent<Energy>().tabletOn = true;
