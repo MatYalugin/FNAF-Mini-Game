@@ -1958,7 +1958,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Left Hole
+  m_Text: Left Hall
 --- !u!222 &345524029
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6108,7 +6108,7 @@ GameObject:
   - component: {fileID: 1035504801}
   - component: {fileID: 1035504800}
   m_Layer: 5
-  m_Name: RightHoleButton
+  m_Name: RightHallButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6554,7 +6554,7 @@ GameObject:
   - component: {fileID: 1068502846}
   - component: {fileID: 1068502845}
   m_Layer: 5
-  m_Name: LeftHoleButton
+  m_Name: LeftHallButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11650,7 +11650,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Right Hole
+  m_Text: Right Hall
 --- !u!222 &1816076849
 CanvasRenderer:
   m_ObjectHideFlags: 0
