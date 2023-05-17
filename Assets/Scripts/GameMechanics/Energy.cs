@@ -10,7 +10,6 @@ public class Energy : MonoBehaviour
     public Text energyText;
     private bool speedTimeTick = true;
     //energy minus speed
-    public float defaultSpeed = 10;
     public float speedTime = 10;
     //speed change conditions
     public bool tabletOn;
