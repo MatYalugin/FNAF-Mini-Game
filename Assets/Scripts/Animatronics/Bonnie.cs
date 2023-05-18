@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Bonny : MonoBehaviour
+public class Bonnie : MonoBehaviour
 {
     public bool check = true;
     private float checkCounter;
@@ -95,7 +95,7 @@ public class Bonny : MonoBehaviour
     }
     public void endAttack()
     {
-        tabletManager.GetComponent<TabletManager>().ChicaOnCam = false;
+        tabletManager.GetComponent<TabletManager>().BonnieOnCam = false;
         tabletManager.GetComponent<TabletManager>().removeBonnieOnLeftHall();
         check = true;
         killCounterTick = false;

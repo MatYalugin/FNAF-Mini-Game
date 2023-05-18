@@ -7,6 +7,7 @@ public class Buttons : MonoBehaviour
     public bool doorClosed;
     public GameObject resourcesManager;
     public int doorNumber;
+    public Animator buttonAnimator;
 
     private void OnMouseDown()
     {
@@ -15,6 +16,7 @@ public class Buttons : MonoBehaviour
             if (doorClosed == false)
             {
                 doorAnimator.Play("closeDoor");
+                buttonAnimator.Play("buttonPressed");
                 doorClosed = true;
                 if(doorNumber == 1)
                 {
@@ -28,6 +30,7 @@ public class Buttons : MonoBehaviour
             else if(doorClosed == true)
             {
                 doorAnimator.Play("openDoor");
+                buttonAnimator.Play("buttonPressed");
                 doorClosed = false;
                 resourcesManager.GetComponent<Energy>().leftDoorOn = true;
                 if (doorNumber == 1)

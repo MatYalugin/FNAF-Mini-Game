@@ -38,7 +38,10 @@ public class TabletManager : MonoBehaviour
     }
     public void removeChicaOnRightHall()
     {
-        background.sprite = rightHallSprite;
+        if (background.sprite == rightHallChicaSprite)
+        {
+            background.sprite = rightHallSprite;
+        }
     }
 
     public void setBonnieOnLeftHall()
@@ -50,7 +53,10 @@ public class TabletManager : MonoBehaviour
     }
     public void removeBonnieOnLeftHall()
     {
-        background.sprite = leftHallSprite;
+        if (background.sprite == leftHallBonnieSprite)
+        {
+            background.sprite = leftHallSprite;
+        }
     }
 }
 
