@@ -8,13 +8,18 @@ public class Buttons : MonoBehaviour
     public GameObject resourcesManager;
     public int doorNumber;
     public Animator buttonAnimator;
+    public AudioSource doorAudio;
+    private bool isReadyToInteract = true;
 
     private void OnMouseDown()
     {
         if (isMouseOver)
         {
-            if (doorClosed == false)
+            if (doorClosed == false && isReadyToInteract == true)
             {
+                isReadyToInteract = false;
+                Invoke("makeReadyToInteract", 0.45f);
+                doorAudio.Play();
                 doorAnimator.Play("closeDoor");
                 buttonAnimator.Play("buttonPressed");
                 doorClosed = true;
@@ -27,8 +32,11 @@ public class Buttons : MonoBehaviour
                     resourcesManager.GetComponent<Energy>().rightDoorOn = true;
                 }
             }
-            else if(doorClosed == true)
+            else if(doorClosed == true && isReadyToInteract == true)
             {
+                isReadyToInteract = false;
+                Invoke("makeReadyToInteract", 0.45f);
+                doorAudio.Play();
                 doorAnimator.Play("openDoor");
                 buttonAnimator.Play("buttonPressed");
                 doorClosed = false;
@@ -43,6 +51,11 @@ public class Buttons : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void makeReadyToInteract()
+    {
+        isReadyToInteract = true;
     }
 
     private void OnMouseEnter()

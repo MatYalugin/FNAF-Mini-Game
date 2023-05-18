@@ -8,6 +8,7 @@ public class Tablet : MonoBehaviour
     public GameObject tablet;
     public bool isWorking = true;
     private bool isReady = true;
+    public AudioSource tabletOnOffAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +24,13 @@ public class Tablet : MonoBehaviour
             resourcesManager.GetComponent<Energy>().tabletOn = true;
             isReady = false;
             Invoke("makeReadyToUse", 1.2f);
+            tabletOnOffAudio.Play();
         }
         else if (Input.GetKeyDown(KeyCode.Space) && tablet.activeSelf == true)
         {
             resourcesManager.GetComponent<Energy>().tabletOn = false;
             tablet.SetActive(false);
+            tabletOnOffAudio.Play();
         }
     }
     public void makeReadyToUse()

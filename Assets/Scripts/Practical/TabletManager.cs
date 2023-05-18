@@ -13,21 +13,32 @@ public class TabletManager : MonoBehaviour
     public bool ChicaOnCam;
     public bool BonnieOnCam;
 
+    public Sprite startWhiteNoise;
+    public GameObject cameraMush;
+
+    public AudioSource camSwitchAudio;
+
     public void switchLeftHall()
     {
         background.sprite = leftHallSprite;
+        cameraMush.SetActive(true);
         if (BonnieOnCam == true)
         {
             background.sprite = leftHallBonnieSprite;
         }
+        Invoke("cameraMushDisappear", 0.25f);
+        camSwitchAudio.Play();
     }
     public void switchRightHall()
     {
         background.sprite = rightHallSprite;
-        if(ChicaOnCam == true)
+        cameraMush.SetActive(true);
+        if (ChicaOnCam == true)
         {
             background.sprite = rightHallChicaSprite;
         }
+        Invoke("cameraMushDisappear", 0.25f);
+        camSwitchAudio.Play();
     }
     public void setChicaOnRightHall()
     {
@@ -57,6 +68,10 @@ public class TabletManager : MonoBehaviour
         {
             background.sprite = leftHallSprite;
         }
+    }
+    public void cameraMushDisappear()
+    {
+        cameraMush.SetActive(false);
     }
 }
 
