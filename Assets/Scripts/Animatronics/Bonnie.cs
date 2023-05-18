@@ -83,7 +83,7 @@ public class Bonnie : MonoBehaviour
     }
     public void checkAttack()
     {
-        if (Random.value < 0.1f)
+        if (Random.value < 0.15f)
         {
             attack();
         }

@@ -24,6 +24,8 @@ public class Freddy : MonoBehaviour
     public void activateFreddy()
     {
         Invoke("killPlayer", timeToKill);
+        bonnieScript.enabled = false;
+        chicaScript.enabled = false;
     }
     public void killPlayer()
     {
@@ -32,8 +34,6 @@ public class Freddy : MonoBehaviour
         Invoke("goToLoseMenu", 2.5f);
         tablet.SetActive(false);
         player.GetComponent<PlayerRotation>().enabled = false;
-        bonnieScript.enabled = false;
-        chicaScript.enabled = false;
 
         button1.GetComponent<Buttons>().isReadyToInteract = false;
         button2.GetComponent<Buttons>().isReadyToInteract = false;

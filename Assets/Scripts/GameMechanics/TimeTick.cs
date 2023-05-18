@@ -56,7 +56,7 @@ public class TimeTick : MonoBehaviour
     {
         if(nightEnd == true)
         {
-            Invoke("letNightEnd", 3);
+            Invoke("letNightEnd", 5);
         }
     }
 }
