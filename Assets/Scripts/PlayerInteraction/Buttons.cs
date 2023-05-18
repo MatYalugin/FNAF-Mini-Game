@@ -9,7 +9,7 @@ public class Buttons : MonoBehaviour
     public int doorNumber;
     public Animator buttonAnimator;
     public AudioSource doorAudio;
-    private bool isReadyToInteract = true;
+    public bool isReadyToInteract = true;
 
     private void OnMouseDown()
     {

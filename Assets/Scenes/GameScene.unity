@@ -3235,6 +3235,8 @@ MonoBehaviour:
   attackingPlayer: 0
   bonnieScript: {fileID: 492186785}
   freddyScript: {fileID: 492186786}
+  button1: {fileID: 1627445074}
+  button2: {fileID: 1491861916}
 --- !u!4 &492186784
 Transform:
   m_ObjectHideFlags: 0
@@ -3274,6 +3276,8 @@ MonoBehaviour:
   attackingPlayer: 0
   freddyScript: {fileID: 492186786}
   chicaScript: {fileID: 492186783}
+  button1: {fileID: 1627445074}
+  button2: {fileID: 1491861916}
 --- !u!114 &492186786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3293,6 +3297,8 @@ MonoBehaviour:
   tablet: {fileID: 1009925467}
   bonnieScript: {fileID: 492186785}
   chicaScript: {fileID: 492186783}
+  button1: {fileID: 1627445074}
+  button2: {fileID: 1491861916}
 --- !u!43 &513623286
 Mesh:
   m_ObjectHideFlags: 0
@@ -6155,6 +6161,7 @@ GameObject:
   - component: {fileID: 893945815}
   - component: {fileID: 893945816}
   - component: {fileID: 893945817}
+  - component: {fileID: 893945818}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6281,6 +6288,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48852ea43f0f303408728c1950303b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &893945818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893945810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34553af80c2cae408f2eb4dd00537c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuIndex: 0
 --- !u!1 &908513805
 GameObject:
   m_ObjectHideFlags: 0
@@ -10893,6 +10913,7 @@ MonoBehaviour:
   doorNumber: 2
   buttonAnimator: {fileID: 1491861922}
   doorAudio: {fileID: 1024388619}
+  isReadyToInteract: 1
 --- !u!95 &1491861922
 Animator:
   serializedVersion: 5
@@ -12398,6 +12419,7 @@ MonoBehaviour:
   doorNumber: 1
   buttonAnimator: {fileID: 1627445080}
   doorAudio: {fileID: 243185579}
+  isReadyToInteract: 1
 --- !u!95 &1627445080
 Animator:
   serializedVersion: 5

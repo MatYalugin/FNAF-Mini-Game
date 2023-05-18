@@ -24,6 +24,9 @@ public class Bonnie : MonoBehaviour
 
     public MonoBehaviour freddyScript;
     public MonoBehaviour chicaScript;
+
+    public GameObject button1;
+    public GameObject button2;
     // Start is called before the first frame update
     void Start()
     {
@@ -110,6 +113,9 @@ public class Bonnie : MonoBehaviour
         player.GetComponent<PlayerRotation>().enabled = false;
         freddyScript.enabled = false;
         chicaScript.enabled = false;
+
+        button1.GetComponent<Buttons>().isReadyToInteract = false;
+        button2.GetComponent<Buttons>().isReadyToInteract = false;
     }
     public void goToLoseMenu()
     {
