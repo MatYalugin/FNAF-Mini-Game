@@ -9,6 +9,8 @@ public class Energy : MonoBehaviour
     public int energy = 100;
     public Text energyText;
     private bool speedTimeTick = true;
+    public GameObject leftButton;
+    public GameObject rightButton;
     //energy minus speed
     public float speedTime = 10;
     //speed change conditions
@@ -82,6 +84,8 @@ public class Energy : MonoBehaviour
         }
         if (energy <= 0)
         {
+            leftButton.GetComponent<Buttons>().isReadyToInteract = false;
+            rightButton.GetComponent<Buttons>().isReadyToInteract = false;
             speedTimeTick = false;
             energy = 0;
             gameObject.GetComponent<EnergyEnd>().energyEndFunction();

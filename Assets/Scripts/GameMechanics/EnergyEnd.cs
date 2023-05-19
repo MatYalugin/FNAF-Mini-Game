@@ -39,5 +39,6 @@ public class EnergyEnd : MonoBehaviour
         animatorDoor2.Play("openDoor");
         player.GetComponent<Tablet>().isWorking = false;
         animatronicsManager.GetComponent<Freddy>().activateFreddy();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
