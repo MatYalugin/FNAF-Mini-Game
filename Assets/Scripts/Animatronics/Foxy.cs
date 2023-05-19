@@ -90,7 +90,7 @@ public class Foxy : MonoBehaviour
     }
     public void checkAttack()
     {
-        if (Random.value < 0.2f)
+        if (Random.value < 0.25f)
         {
             attack();
         }

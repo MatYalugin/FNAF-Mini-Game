@@ -85,7 +85,14 @@ public class TabletManager : MonoBehaviour
     {
         if (background.sprite == startWhiteNoise)
         {
-            background.sprite = leftHallSprite;
+            if(BonnieOnCam != true)
+            {
+                background.sprite = leftHallSprite;
+            }
+            if (BonnieOnCam == true)
+            {
+                background.sprite = leftHallBonnieSprite;
+            }
         }
     }
     public void cameraMushDisappear()

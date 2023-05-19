@@ -25,12 +25,14 @@ public class Tablet : MonoBehaviour
             isReady = false;
             Invoke("makeReadyToUse", 1.2f);
             tabletOnOffAudio.Play();
+            gameObject.GetComponent<PlayerRotation>().enabled = false;
         }
         else if (Input.GetKeyDown(KeyCode.Space) && tablet.activeSelf == true)
         {
             resourcesManager.GetComponent<Energy>().tabletOn = false;
             tablet.SetActive(false);
             tabletOnOffAudio.Play();
+            gameObject.GetComponent<PlayerRotation>().enabled = true;
         }
     }
     public void makeReadyToUse()
