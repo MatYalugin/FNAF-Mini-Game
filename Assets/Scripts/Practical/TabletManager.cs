@@ -12,6 +12,7 @@ public class TabletManager : MonoBehaviour
 
     public bool ChicaOnCam;
     public bool BonnieOnCam;
+    public bool MushOnLeftCam;
 
     public Sprite startWhiteNoise;
     public GameObject cameraMush;
@@ -22,9 +23,13 @@ public class TabletManager : MonoBehaviour
     {
         background.sprite = leftHallSprite;
         cameraMush.SetActive(true);
-        if (BonnieOnCam == true)
+        if (BonnieOnCam == true && MushOnLeftCam != true)
         {
             background.sprite = leftHallBonnieSprite;
+        }
+        if(MushOnLeftCam == true)
+        {
+            background.sprite = startWhiteNoise;
         }
         Invoke("cameraMushDisappear", 0.25f);
         camSwitchAudio.Play();
@@ -65,6 +70,20 @@ public class TabletManager : MonoBehaviour
     public void removeBonnieOnLeftHall()
     {
         if (background.sprite == leftHallBonnieSprite)
+        {
+            background.sprite = leftHallSprite;
+        }
+    }
+    public void setLeftCameraMush()
+    {
+        if (background.sprite == leftHallSprite)
+        {
+            background.sprite = startWhiteNoise;
+        }
+    }
+    public void removeLeftCameraMush()
+    {
+        if (background.sprite == startWhiteNoise)
         {
             background.sprite = leftHallSprite;
         }

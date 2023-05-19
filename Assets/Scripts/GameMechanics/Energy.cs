@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Energy : MonoBehaviour
 {
     private float energyCounter;
-    private int energy = 100;
+    public int energy = 100;
     public Text energyText;
     private bool speedTimeTick = true;
     //energy minus speed

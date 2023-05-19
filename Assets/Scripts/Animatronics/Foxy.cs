@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Chica : MonoBehaviour
+public class Foxy : MonoBehaviour
 {
     public bool check = true;
     private float checkCounter;
@@ -12,27 +12,31 @@ public class Chica : MonoBehaviour
     public float killTime;
     private bool killCounterTick;
     public GameObject tabletManager;
-    public GameObject rightButton;
+    public GameObject leftButton;
     public GameObject player;
     public GameObject jumpscare;
     public int loseMenuIndex = 3;
     public GameObject tablet;
     public bool attackingPlayer = false;
 
+    public AudioSource runAudio;
+    public AudioSource doorKickAudio;
+
     private bool endAttackTimeReseted = false;
     private bool killCounterTickExecuted = false;
 
-    public MonoBehaviour bonnieScript;
     public MonoBehaviour freddyScript;
-    public MonoBehaviour foxyScript;
+    public MonoBehaviour chicaScript;
+    public MonoBehaviour bonnieScript;
 
     public GameObject button1;
     public GameObject button2;
 
+    public GameObject recourcesManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -40,13 +44,13 @@ public class Chica : MonoBehaviour
     {
         if (attackingPlayer == true)
         {
-            if (rightButton.GetComponent<Buttons>().doorClosed)
+            if (leftButton.GetComponent<Buttons>().doorClosed)
             {
                 if (endAttackTimeReseted == false)
                 {
+                    endAttack();
                     killCounter = 0;
                     killCounterTick = false;
-                    Invoke("endAttack", 20);
                     endAttackTimeReseted = true;
                 }
                 killCounterTickExecuted = false;
@@ -72,7 +76,7 @@ public class Chica : MonoBehaviour
             }
         }
 
-        if(killCounterTick == true)
+        if (killCounterTick == true)
         {
             killCounter += Time.deltaTime;
             if (killCounter >= killTime)
@@ -82,26 +86,31 @@ public class Chica : MonoBehaviour
                 killCounter = 0f;
             }
         }
+
     }
     public void checkAttack()
     {
-        if (Random.value < 0.1f)
+        if (Random.value < 0.2f)
         {
             attack();
         }
     }
     public void attack()
     {
+        runAudio.Play();
         check = false;
-        tabletManager.GetComponent<TabletManager>().ChicaOnCam = true;
-        tabletManager.GetComponent<TabletManager>().setChicaOnRightHall();
+        tabletManager.GetComponent<TabletManager>().MushOnLeftCam = true;
+        tabletManager.GetComponent<TabletManager>().setLeftCameraMush();
         attackingPlayer = true;
         killCounter = 0;
     }
     public void endAttack()
     {
-        tabletManager.GetComponent<TabletManager>().ChicaOnCam = false;
-        tabletManager.GetComponent<TabletManager>().removeChicaOnRightHall();
+        recourcesManager.GetComponent<Energy>().energy -= 5;
+        doorKickAudio.Play();
+        runAudio.Stop();
+        tabletManager.GetComponent<TabletManager>().MushOnLeftCam = false;
+        tabletManager.GetComponent<TabletManager>().removeLeftCameraMush();
         check = true;
         killCounterTick = false;
         attackingPlayer = false;
@@ -113,9 +122,9 @@ public class Chica : MonoBehaviour
         Invoke("goToLoseMenu", 2.5f);
         tablet.SetActive(false);
         player.GetComponent<PlayerRotation>().enabled = false;
-        bonnieScript.enabled = false;
         freddyScript.enabled = false;
-        foxyScript.enabled = false;
+        chicaScript.enabled = false;
+        bonnieScript.enabled = false;
 
         button1.GetComponent<Buttons>().isReadyToInteract = false;
         button2.GetComponent<Buttons>().isReadyToInteract = false;

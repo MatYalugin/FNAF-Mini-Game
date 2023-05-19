@@ -12,6 +12,7 @@ public class Freddy : MonoBehaviour
     public GameObject tablet;
     public MonoBehaviour bonnieScript;
     public MonoBehaviour chicaScript;
+    public MonoBehaviour foxyScript;
 
     public GameObject button1;
     public GameObject button2;
@@ -26,6 +27,7 @@ public class Freddy : MonoBehaviour
         Invoke("killPlayer", timeToKill);
         bonnieScript.enabled = false;
         chicaScript.enabled = false;
+        foxyScript.enabled = false;
     }
     public void killPlayer()
     {
