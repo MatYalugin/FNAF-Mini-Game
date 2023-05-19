@@ -14,6 +14,8 @@ public class EnergyEnd : MonoBehaviour
     public GameObject player;
     public GameObject animatronicsManager;
     public GameObject energyEndAudio;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class EnergyEnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void energyEndFunction()
     {
