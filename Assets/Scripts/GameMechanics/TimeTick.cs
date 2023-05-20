@@ -19,8 +19,7 @@ public class TimeTick : MonoBehaviour
         Invoke("time3PM", 288);
         Invoke("time4PM", 384);
         Invoke("time5PM", 480);
-        Invoke("time6PM", 1);
-
+        Invoke("time6PM", 576);
     }
     public void time1PM()
     {
