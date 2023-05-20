@@ -28,6 +28,7 @@ public class Bonnie : MonoBehaviour
 
     public GameObject button1;
     public GameObject button2;
+    public GameObject recourcesManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -118,6 +119,7 @@ public class Bonnie : MonoBehaviour
 
         button1.GetComponent<Buttons>().isReadyToInteract = false;
         button2.GetComponent<Buttons>().isReadyToInteract = false;
+        recourcesManager.SetActive(false);
     }
     public void goToLoseMenu()
     {

@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseMenu.unity
     guid: 2f3a92564d51a1e4ca5d408a80159e76
+  - enabled: 1
+    path: Assets/Scenes/ExtraNights/GameSceneHardNight.unity
+    guid: fccf7d3fa0ad8a045ba0c9da2f398974
+  - enabled: 1
+    path: Assets/Scenes/ExtraNights/GameSceneUnrealNight.unity
+    guid: 678636b58e9bed648a28931562e5baa8
   m_configObjects: {}

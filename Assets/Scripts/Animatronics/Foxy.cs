@@ -128,6 +128,7 @@ public class Foxy : MonoBehaviour
 
         button1.GetComponent<Buttons>().isReadyToInteract = false;
         button2.GetComponent<Buttons>().isReadyToInteract = false;
+        recourcesManager.SetActive(false);
     }
     public void goToLoseMenu()
     {

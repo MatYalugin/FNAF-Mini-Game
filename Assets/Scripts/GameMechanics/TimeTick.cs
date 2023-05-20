@@ -49,6 +49,7 @@ public class TimeTick : MonoBehaviour
     }
     public void letNightEnd()
     {
+        gameObject.GetComponent<ExtraNightsUnlock>().saveNight();
         Time.timeScale = 1f;
         SceneManager.LoadScene(wonMenuIndex);
     }

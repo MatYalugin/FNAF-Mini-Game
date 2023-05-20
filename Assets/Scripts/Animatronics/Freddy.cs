@@ -16,6 +16,7 @@ public class Freddy : MonoBehaviour
 
     public GameObject button1;
     public GameObject button2;
+    public GameObject recourcesManager;
 
     // Update is called once per frame
     void Update()
@@ -39,6 +40,7 @@ public class Freddy : MonoBehaviour
 
         button1.GetComponent<Buttons>().isReadyToInteract = false;
         button2.GetComponent<Buttons>().isReadyToInteract = false;
+        recourcesManager.SetActive(false);
     }
     public void goToLoseMenu()
     {
