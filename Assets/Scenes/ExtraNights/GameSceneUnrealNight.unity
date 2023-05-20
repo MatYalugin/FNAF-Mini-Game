@@ -725,6 +725,7 @@ GameObject:
   - component: {fileID: 163157126}
   - component: {fileID: 163157128}
   - component: {fileID: 163157129}
+  - component: {fileID: 163157130}
   m_Layer: 0
   m_Name: ResourcesManager
   m_TagString: Untagged
@@ -802,6 +803,22 @@ MonoBehaviour:
   player: {fileID: 893945810}
   animatronicsManager: {fileID: 492186782}
   energyEndAudio: {fileID: 2107089381}
+--- !u!114 &163157130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163157125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5de73209bb9cd43a4f779785339f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saving: 1
+  nightToSave: 3
+  hardNightButton: {fileID: 0}
+  unrealNightButton: {fileID: 0}
 --- !u!1 &175097430
 GameObject:
   m_ObjectHideFlags: 0
